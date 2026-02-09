@@ -1,0 +1,126 @@
+.service-detail-page {
+  overflow-x: hidden;
+  background-color: var(--bg-alt);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.service-detail-hero {
+  padding: 80px 0;
+  background-color: var(--primary);
+  color: white;
+}
+
+.breadcrumb {
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.service-detail-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.service-tagline {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 800px;
+}
+
+/* Detail Content */
+.service-detail-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.main-info-full h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.full-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.service-detail-cta {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+/* Loading/Error */
+.service-detail-loading,
+.service-detail-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--primary-light);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.service-detail-error h2 {
+  margin-bottom: 16px;
+}
+
+.service-detail-error p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-detail-cta {
+    margin-top: 40px;
+  }
+
+  .service-detail-content {
+    padding: 60px 24px;
+  }
+}
+
+/* More Services Section */
+.more-services {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
